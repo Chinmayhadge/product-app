@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 9</title>
+    <style type="text/css">
+        .container {
+            height: 300px;
+            width: 300px;
+            border: 1px solid;
+            display: inline-block;
+        }
+
+        .tabpane {
+            height: 300px;
+            background-color: pink;
+            display: none;
+        }
+
+        .class {
+            height: 600px;
+            width: 400px;
+            border: 1px solid;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <button class="btn" onclick="fun1(this,'red')">Button 1</button>
+    <button class="btn" onclick="fun1(this,'green')">Button 2</button>
+    <button class="btn" onclick="fun1(this,'blue')">Button 3</button>
+    <button class="btn" onclick="fun1(this,'yellow')">Button 4</button>
+    <button class="btn" onclick="fun1(this,'pink')">Button 5</button>
+
+
+
+
+    <!-- 
+<div class="container" id="div1"></div>
+<div class="container" id="div2"></div>
+<div class="container" id="div3"></div>
+<div class="container" id="div4"></div>
+<br>
+
+<button type="button" onclick="changeprop('div1')">Click 1</button>
+<button type="button" onclick="changeprop('div2')">Click 2</button>
+<button type="button" onclick="changeprop('div3')">Click 3</button>
+<button type="button" onclick="changeprop('div4')">Click 4</button> -->
+
+
+
+
+    <!-- <button type="button" onclick="OpenTab(this,'tab1')" class="btn">Open Tab 1</button>
+<button type="button" onclick="OpenTab(this,'tab2')" class="btn">Open Tab 2</button>
+<button type="button" onclick="OpenTab(this,'tab3')" class="btn">Open Tab 3</button> -->
+
+
+
+    <!-- <div class="tabpane" id="tab1" style="display: block;">
+    <h1>inside tab 1</h1>
+</div>
+<div class="tabpane" id="tab2">
+    <h1>inside tab 2</h1>
+</div>
+<div class="tabpane" id="tab3">
+    <h1>inside tab 3</h1>
+</div> -->
+
+
+
+    <button class="" onclick="OpenModal(this,'heading 1','image1.jpg');">Modal 1</button>
+    <button class="" onclick="OpenModal(this,'heading 2','image2.jpg');">Modal 2</button>
+    <button class="" onclick="OpenModal(this,'heading 3','image3.jpg');">Modal 3</button>
+
+    <div class="class" id="modal">
+        <button onclick="CloseModal()">X</button>
+
+        <!-- <input type="text" name="" id="int"> -->
+        <h1 id="title"></h1>
+        <img src="" id="img">
+    </div>
+
+
+
+
+    <script type="text/javascript">
+
+
+        var modal = document.getElementById("modal");
+        function OpenModal(a, b, c) {
+            modal.style.display = "block";
+            // document.getElementById("int").value = a.innerHTML;
+            document.getElementById("title").innerHTML = b;
+            document.getElementById("img").src = c;
+        }
+
+
+        function CloseModal() {
+            modal.style.display = "none";
+        }
+
+
+
+
+        function OpenTab(x, y) {
+            var tab = document.getElementsByClassName("tabpane");
+            for (var i of tab) {
+                i.style.display = "none"
+            }
+
+            document.getElementById(y).style.display = "block";
+
+            var btn = document.getElementsByClassName("btn");
+            for (var j of btn) {
+                j.style.border = "solid black "
+            }
+            x.style.border = "solid red 3px";
+        }
+
+
+        // function changeprop(name){
+        //     var d = document.getElementsByClassName("container");
+        //     for(var i of d){
+        //         i.style.borderRadius = "0"
+        //     }
+        //     document.getElementById(name).style.borderRadius = "50%";
+        // }
+
+
+        // function fun1(a, b) {
+        //     var v = document.getElementsByClassName("btn");
+        //     for (var j of v) {
+        //         j.style.backgroundColor = "white";
+        //     }
+        //     a.style.backgroundColor = b;
+
+
+        // }
+
+
+
+// var a  = prompt("num1")
+// var b  = prompt("num2")
+
+// function addnum(x,y){
+
+//     document.write(x-y)
+// }
+// addnum(a,b);
+// addnum("hello",1);
+// addnum(100,30);
+
+    </script>
+</body>
+
+</html>

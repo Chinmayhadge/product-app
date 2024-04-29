@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 3</title>
+    <style>
+        .container {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            background-color: green;
+        }
+
+        .container1 {
+            height: 200px;
+            width: 200px;
+            border: 12px dashed;
+            background-color: rgb(128, 0, 105);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- JavaScript Arithmetic Operators -->
+
+    <!-- +	Addition
+-	Subtraction
+*	Multiplication
+**	Exponentiation (ES2016)
+/	Division
+%	Modulus (Division Remainder)
+++	Increment
+--	Decrement -->
+
+    <!-- JavaScript Assignment Operators -->
+
+    <!-- =	 x = y	  x = y
++=	 x += y	  x = x + y
+-=	 x -= y	  x = x - y
+*=	 x *= y	  x = x * y
+/=	 x /= y	  x = x / y
+%=	 x %= y	  x = x % y
+**=	 x **= y  x = x ** y -->
+
+
+
+    <!-- JavaScript Comparison Operators -->
+
+
+    <!-- ==	equal to only value
+===	equal value and equal type
+!=	not equal
+!==	not equal value or not equal type
+>	greater than
+<	less than
+>=	greater than or equal to
+<=	less than or equal to
+
+-->
+
+
+    <!-- JavaScript Logical Operators -->
+
+    <!-- 
+&&	logical and
+||	logical or
+!	logical not -->
+    <!-- <h1>hello world!</h1> -->
+
+    <!-- <div class="container" id="box" onclick="changecolor()"></div> -->
+    <!-- <a href="https://www.w3schools.com/jsref/jsref_try_catch.asp" id="link">Click ME</a> -->
+    <!-- <button onclick="getattr()">Read Attribute</button> -->
+    <!-- 
+<a  id="link2">Click ME</a>
+<button onclick="setattr()">Read Attribute</button> -->
+
+
+    <!-- <a href="https://www.w3schools.com/jsref/jsref_try_catch.asp" id="link3">Click ME</a>
+<button onclick="removeattr()">Read Attribute</button> -->
+
+
+    <img src="portfolio-1.jpg" height="100" width="100" id="imge" onclick="imgchange()">
+
+
+
+    <div class="container" id="box2" onclick="changeclr()"></div>
+    <script type="text/javascript">
+
+        function changeclr() {
+            document.getElementById("box2").setAttribute("class", "container1");
+        }
+
+
+        function imgchange() {
+            document.getElementById("imge").setAttribute("src", "portfolio-2.jpg")
+        }
+
+
+        // function removeattr(){
+        //     document.getElementById("link3").removeAttribute("href");
+        // }
+
+
+        // function setattr(){
+        //     var att = document.getElementById("link2");
+        //     att.setAttribute("href","https://www.w3schools.com/jsref/jsref_try_catch.asp")
+        // }
+
+        // function getattr() {
+        //     var x = document.getElementById("link");
+        //     var w = x.getAttribute("href");
+        //     alert(w);
+        // }
+
+
+        //         function changecolor(){
+        // var ele = document.getElementById("box");
+        // ele.style.backgroundColor = "red";
+        //         }
+        // document.write("<h1>hello world!</h1>");
+
+
+        // alert(10+20)
+        // alert(10-20);
+        // alert(10*10).;
+        // alert(10/6)
+        // alert(2**4);
+        // alert(10%5);
+
+        // var x = 10;
+        // alert(++x);
+        // alert(--x)
+
+        // var x = 10;
+        // x = x + 90
+        // x += 90;
+        // x-= 5;
+        // x*=4;
+        // x/=4;
+        // x%=2;
+        // alert(x);
+
+
+        // var a = "10";
+        // var b = 10;
+        // // alert(a == b);
+        // // alert(a === b)
+
+
+        // var t = 10;
+        // var u = 101;
+        // // alert(t!=u);
+        // alert(t!==u);
+
+        // alert(t>u)
+        // alert(t<u)
+
+        // alert(t>=u)
+
+
+
+        // alert(t <= u && t == u)
+        // alert(t <== u || t == u)
+
+
+
+
+
+
+        var e = 100;
+        // globar varible
+        function fun1() {
+            var t1 = "hello";
+            alert(100)
+        }
+        fun1();
+        alert(t1)
+
+        function fun2() {
+            // alert(e)
+        }
+        fun2();
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script type="text/javascript">
+
+
+
+        var z = "hello";
+
+        // Array
+        // var arr = Array(1,2,3,4,"a","b","c","d",true,false);
+        // document.write(arr);
+        // console.log(arr);
+        // document.write(arr[5],arr[6]);
+
+        var arr2 = Array(z);
+        // var arr2 = [1, 2, 3, 4, "a", "b", "c", "d", true, false, z];
+
+        document.write(arr2)
+        console.log(arr2);
+        // document.write(arr2[6]);
+        // document.write(arr2[10]);
+
+
+        // Object
+
+        var obj = {
+            name: "abc",
+            email: "abc@example.com",
+            id: "001",
+            course: "java",
+            contact: 79889090
+        };
+
+
+        // console.log(obj);
+        // document.write(obj);
+        // alert(obj)
+
+        // document.write(obj.name +"<br>"+ obj.email + "<br>"+ obj.id);
+
+        // document.write(obj['name'] + " <br>"+ obj['email'] + "<br>"+ obj['course']);
+
+
+        // Array inside array
+
+        // var arr3 = [1,2,3,4,"a","b","c",[111,222,333,[1111,2222,3333,4444,5555],44,555],"d",true,false];
+        // // console.log(arr3[7]);
+        // // document.write(arr3[7][2]);
+        // console.log(arr3[7][3][3]);
+
+
+
+        // Object inside object
+
+        // var student = {
+        // stu1 : {
+        // name :"abc",
+        // email : "abc@example.com",
+        // contact : 979890
+        // },
+        // stu2 : {
+        //     name : "pqr",
+        //     email : "pqr@example.com",
+        //     contact : 979890,
+
+        // },
+        // stu3:{
+        //     name : "xyz",
+        //     email : "xyz@example.com",
+        //     contact : 979890,
+        // },
+        // stu4:{
+        //     name : "lmo",
+        //     email : "lmo@example.com",
+        //     contact : 979890,
+        // },
+        // stu5:{
+        //     name : "kgf",
+        //     email : "kgf@example.com",
+        //     contact : 979890,
+        // }
+        // }
+
+        // console.log(student);
+        // document.write(student.stu2.name + "<br>" + student.stu5.email);
+
+
+        // document.write(student['stu4']['name'] + "<br>" );
+
+
+
+        // Object Inside array
+
+
+        // var main_arr = [
+        // {
+        // name :"abc",
+        // email : "abc@example.com",
+        // contact : 979890
+        // },
+
+        //  {
+        //     name : "pqr",
+        //     email : "pqr@example.com",
+        //     contact : 979890,
+
+        // },
+        // {
+        //     name : "xyz",
+        //     email : "xyz@example.com",
+        //     contact : 979890,
+        // },
+        // {
+        //     name : "lmo",
+        //     email : "lmo@example.com",
+        //     contact : 979890,
+        // },
+        // {
+        //     name : "kgf",
+        //     email : "kgf@example.com",
+        //     contact : 979890,
+        // }
+        // ]
+        // console.log(main_arr[4]);
+
+        // document.write(main_arr[3].name + ": " + main_arr[3].email);
+
+
+        // document.write(main_arr[2]['email'] + main_arr[2]['name'] + main_arr[2]['contact']);
+
+
+
+        // Array Inside Object
+
+        var main_obj = {
+            name: ["abc", "pqr", "xyz", "lmo"],
+            email: ["abc@example.com", "pqr@example.com", "xyz@example.com", "lmo@example.com"],
+            contact: [434335, 465434, 342342435, 34234242]
+        };
+
+        // console.log(main_obj);
+        // document.write(main_obj.name[2])
+        // document.write(main_obj['contact'][2])
+
+        var object1 = {
+            name: [
+                {
+                    fname: "Sunil",
+                    lname: "Sahani"
+                },
+                {
+                    fname: "balaji",
+                    lname: "kounder"
+                },
+                {
+                    fname: "neha",
+                    lname: "kotian"
+                }
+            ]
+        };
+
+        //  document.write(object1.name[1].fname)
+        //  document.write(object1['name'][2]['fname']);
+
+
+
+
+        //  var complex = {
+        //     menu: {
+        //   id: "file",
+        //   value: "File",
+        //   popup: {
+        //     menuitem: [
+        //       {
+        //         value: "New", 
+        //       onclick: "CreateNewDoc()"
+        //     },
+        //       {
+        //         value: "Open",
+        //        onclick: "OpenDoc()"
+        //     },
+        //       {
+        //         value: "Close",
+        //        onclick: "CloseDoc()"
+        //     }
+        //     ]
+        //   }
+        // }
+
+        // }
+        // document.write(complex['menu']['popup']['menuitem'][1]['onclick'])
+
+
+        var g = {
+            "menu": {
+                "id": "file",
+                "value": "File",
+                "popup": {
+                    "menuitem": [
+                        { "value": "New", "onclick": "CreateNewDoc()" },
+                        { "value": "Open", "onclick": "OpenDoc()" },
+                        { "value": "Close", "onclick": "CloseDoc()" }
+                    ]
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="Session13.css" type="text/css">
+    <title>Session 13</title>
+</head>
+
+
+<!-- <body style="height:1300px" onscroll="changeNav()" id="body"> -->
+
+<body>
+
+
+    <!-- <nav id="nav">
+        <div class="nav_brand">
+            <a href="">VLAVA</a>
+            <button onclick="navfun()" class="icon"><i class="bi bi-list"></i></button>
+
+        </div>
+       
+        <div id="list">
+            <ul class="navbar">
+
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">SERVICE</a></li>
+                <li><a href="#">PORFOLIO</a></li>
+                <li><a href="#">TEAM</a></li>
+                <li><a href="#">PRISING</a></li>
+                <li><a href="#">DROPDOWN</a></li>
+
+                <li><a href="#">CONTACT</a></li>
+            </ul>
+        </div>
+
+    </nav> -->
+
+
+    <!-- 
+    <table border="1">
+        <tr>
+            <th>Name </th>
+            <th>Email </th>
+            <th>Id </th>
+            <th> </th>
+        </tr>
+        <tr>
+            <td>abc</td>
+            <td>abc@gmail.com</td>
+            <td>89283921</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>pqr</td>
+            <td>pqr@gmail.com</td>
+            <td>938983</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>abc2</td>
+            <td>abc@gmail.com</td>
+            <td>89283921</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>pqr2</td>
+            <td>pqr@gmail.com</td>
+            <td>938983</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>ab3</td>
+            <td>abc@gmail.com</td>
+            <td>89283921</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>pq3</td>
+            <td>pqr@gmail.com</td>
+            <td>938983</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>abc4</td>
+            <td>abc@gmail.com</td>
+            <td>89283921</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+        <tr>
+            <td>pq4r</td>
+            <td>pqr@gmail.com</td>
+            <td>938983</td>
+            <td>
+                <button onclick="delRow(this)">Delete</button>
+            </td>
+        </tr>
+    </table> -->
+
+
+    <button onclick="addData()">Click Me</button>
+    <table id="table" border="1">
+        <tr>
+            <th>ID</th>
+            <th>UserId</th>
+            <th>title</th>
+            <th>complete</th>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+
+
+
+
+        var data = [
+            {
+                "userId": 1,
+                "id": 1,
+                "title": "delectus aut autem",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 2,
+                "title": "quis ut nam facilis et officia qui",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 3,
+                "title": "fugiat veniam minus",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 4,
+                "title": "et porro tempora",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 5,
+                "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 6,
+                "title": "qui ullam ratione quibusdam voluptatem quia omnis",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 7,
+                "title": "illo expedita consequatur quia in",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 8,
+                "title": "quo adipisci enim quam ut ab",
+                "completed": true
+            },
+            {
+                "userId": 1,
+                "id": 9,
+                "title": "molestiae perspiciatis ipsa",
+                "completed": false
+            },
+            {
+                "userId": 1,
+                "id": 10,
+                "title": "illo est ratione doloremque quia maiores aut",
+                "completed": true
+            },
+        ];
+
+        var table = document.getElementById("table");
+
+        function addData() {
+
+            for (var i of data) {
+                var tr = document.createElement("tr");
+                for (var j in i) {
+                    var td = document.createElement("td");
+                    var text = document.createTextNode(i[j]);
+                    td.appendChild(text);
+                    // console.log(td);
+                    tr.appendChild(td);
+                }
+                var td = document.createElement("td");
+                var btn = document.createElement("button");
+                var text = document.createTextNode("del")
+                btn.appendChild(text)
+                btn.setAttribute("onclick", "delRow(this)");
+                td.appendChild(btn);
+                tr.appendChild(td);
+                table.appendChild(tr);
+            }
+        }
+
+        function fun1(a) {
+            console.log(a);
+        }
+
+        function delRow(x) {
+            var a = x.parentNode.parentNode;
+            a.parentNode.removeChild(a);
+        }
+
+        function navfun() {
+            var x = document.querySelector("#list");
+            if (x.style.height == "160px") {
+                x.style.height = "0px";
+            }
+            else {
+                x.style.height = "160px";
+            }
+        }
+
+
+
+        function changeNav() {
+            var nav = document.querySelector("#nav");
+            if (document.documentElement.scrollTop > 100) {
+                nav.style.backgroundColor = "#ff020273";
+            }
+            else {
+                nav.style.backgroundColor = "#3d6b5c";
+
+            }
+        }
+    </script>
+</body>
+
+</html>

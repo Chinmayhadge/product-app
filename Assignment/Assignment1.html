@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 1</title>
+    <style>
+        body{
+            background-color: #FFB6B9;
+        }
+        .main{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .calc{
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 35%;
+            background-color: #FAE3D9;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 20px;
+        }
+        
+        .Block{
+            margin: 20px;
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .Block1{
+            margin: 0 20px;
+        }
+        button{
+            display: inline-block;
+            margin-right: 20px;
+            height: 50px;
+            background-color: #61C0BF;
+            width: 180px;
+            border-radius: 25px;
+            border: none;
+            color: aliceblue;
+            font-weight: 700;
+            font-size: 16px;
+        }
+        .output{
+            width: 200px;
+            height: 45px;
+            text-align: center;
+            font-weight: 600;
+            box-sizing: border-box;
+            margin-left: 20px;
+            display: inline-block;
+            padding: 10px 15px ;
+            border: 1px solid #FFB6B9;
+            border-radius: 25px;
+            vertical-align: middle;
+            font-size: 20px;
+            line-height: 24px;
+        }
+        .output5{
+            margin: 0 ;
+        }
+        .inlabel{
+            width: 220px;
+            height: 45px;
+            text-align: center;
+            font-weight: 600;
+            box-sizing: border-box;
+            display: inline-block;
+            padding: 10px 15px ;
+            vertical-align: middle;
+            font-size: 20px;
+            line-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="calc">
+        <h1>Calculator</h1>
+        <div class="Block1 Block">
+            <div class="inlabel"> Num 1</div>
+            <div class="inlabel"> Num 2</div>
+        </div>
+        <div class="Block">
+            <div id="input1" class="output5 output"></div>
+            <div id="input2" class="output"></div>
+        </div>
+    <div class="Block">
+        <button onclick="add()">ADD</button> =
+        <div id="output1" class="output"></div>
+    </div>
+    <div class="Block">
+        <button onclick="sub()">SUBTRACT</button> =
+        <div id="output2" class="output"></div>
+    </div>
+    <div class="Block">
+        <button onclick="mult()">MULTIPLY</button> =
+        <div id="output3" class="output"></div>
+    </div>
+    <div class="Block">
+        <button onclick="divide()">DIVIDE</button> =
+        <div id="output4" class="output"></div>
+    </div>
+    
+    </div>
+</div>
+<script>
+        var x = prompt("enter a number...");
+        var y = prompt("enter a second number...");
+        document.getElementById("input1").innerHTML = x;
+        document.getElementById("input2").innerHTML = y;
+
+    function add(){
+        var z = Number(x) + Number(y);
+        document.getElementById("output1").innerHTML = z;
+    }
+
+    function sub(){
+        var z = x - y;
+        document.getElementById("output2").innerHTML = z;
+    }
+
+    function mult(){
+        var z = x * y;
+        document.getElementById("output3").innerHTML = z;
+    }
+
+    function divide(){
+        var z = x / y;
+        document.getElementById("output4").innerHTML = z;
+    }
+    
+</script>
+</body>
+</html>

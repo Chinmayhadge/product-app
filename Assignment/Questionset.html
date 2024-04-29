@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- Q1 HTML -->
+
+    <input type="text" id="ip1">
+    <input type="text" id="ip2">
+    <input type="text" id="ip3">
+    <input type="text" id="ip4">
+
+
+    <br><br>
+    <button onclick="concat()">Click to Merge</button>
+    <p id="merge"></p><br>
+    <button onclick="display()">Click to Alert</button><br><br>
+
+    <!--Q3 HTML-->
+    <input type="text" id="ip5" value="Jhon">
+    <button onclick="cTom()" id="btn1">Change to Tom</button><br><br>
+
+
+    <img src="../../CSS/Assignment/Assignment[Main-28Aug]/Images/hero-bg.jpg" width="300">
+    <img src="../../CSS/Assignment/Assignment_1/images/portfolio-1 (1).jpg" width="300">
+    <img src="../../CSS/Assignment/Assignment_Main/images/fact1.png" width="300"><br><BR>
+
+    <!-- Q5 -->
+
+    <input type="text" id="num1">
+    <input type="text" id="num2"><br><br>
+    <button onclick="addnum()">Click to Num</button><br><br>
+    <p id="add"></p><br><br>
+    <button onclick="evennum()">Even Numbers</button><br><br>
+    <p id="evennum"></p><br><br>
+
+    <script type="text/javascript">
+
+        //Q1
+        // function concat() {
+        //     let p1 = document.getElementById("ip1").value;
+        //     let p2 = document.getElementById("ip2").value;
+        //     let p3 = document.getElementById("ip3").value;
+        //     let p4 = document.getElementById("ip4").value;
+        //     let concat = p1 + " " + p2 + " " + p3 + " " + p4;
+        //     document.getElementById("merge").innerHTML = concat;
+        //     console.log(concat);
+        // }
+        // function concat() {
+        //     let p5 = document.querySelectorAll("input");
+
+        //     let final = "";
+        //     for (let i of p5) {
+        //         final += p5[i] + "";
+        //         console.log(final);
+        //     }
+        // }
+
+        // var a = document.querySelectorAll("img");
+        // console.log(a);
+        // for (let i of a) {
+        //     console.log
+        // }
+
+        //Q2
+        // function display() {
+        //     alert(document.getElementById("merge").innerHTML);
+        // }
+
+        //Q3
+        // function cTom() {
+        //     let a1 = document.getElementById("ip5");
+        //     let btn = document.getElementById("btn1");
+        //     if (a1.value == "Jhon") {
+        //         a1.value = "Tom";
+        //         btn1.innerHTML = "Change to Jhon";
+        //     } else {
+        //         a1.value = "Jhon";
+        //         btn1.innerHTML = "Change to Tom";
+        //     }
+        // }
+
+        //Q4
+        var a = document.querySelectorAll("img");
+        console.log(a);
+
+        for (let i of a) {
+            // console.log(i);
+            let getattr = i.getAttribute("src");
+            console.log(getattr);
+            let setattr = i.setAttribute("src", "#");
+        }
+
+        //Q5
+        function addnum() {
+            let num1 = Number(document.getElementById("num1").value);
+            let num2 = Number(document.getElementById("num2").value);
+            ans = num1 + num2;
+            document.getElementById("add").innerText = ans;
+        }
+
+        // Q6
+
+        function evennum() {
+            for (let i = 1; i <= 20; i++) {
+                if (i % 2 == 0) {
+                    document.getElementById("evennum").innerHTML += `${i}<br>`;
+                }
+            }
+        }
+
+        //Q7
+        let students = {
+            stu1: {
+                name: "abc",
+                subjects: ['js', 'PHP', 'JQuery', 'python']
+            },
+            stu2: {
+                name: "xyz",
+                subjects: ['js', 'PHP', 'CSS', 'HTML']
+            },
+            stu3: {
+                name: "pqr",
+                subjects: ['js', 'PHP', 'CSS', 'JAVA']
+            }
+        }
+
+        students.map((ele) => {
+            for (let i of ele) {
+                for (let j in i) {
+                    console.log(i[j]);
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

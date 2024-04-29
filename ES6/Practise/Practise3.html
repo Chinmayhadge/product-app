@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise 3</title>
+</head>
+
+<body>
+    <input type="text" id="p1">
+    <button onclick="fun1()">click</button>
+    <p id="p2"></p>
+    <script>
+        // try {
+        //     let a = 200;
+        //     a.toUpperCase();
+        // } catch (e) {
+        //     console.log(e)
+        // }
+        function fun1() {
+            let msg = document.getElementById("p2");
+            msg.innerHTML = "";
+            let x = document.getElementById("p1").value;
+            try {
+                if (x.trim() == "") throw "is empty string";
+                x = Number(x);
+                if (isNaN(x)) throw "is not a number";
+
+                if (x > 10) throw "is too high";
+                if (x < 5) throw "is too low";
+            } catch (e) {
+                msg.innerHTML = `input ${e}`;
+            }
+        }
+    </script>
+</body>
+
+</html>

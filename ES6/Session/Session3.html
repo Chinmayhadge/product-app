@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 3</title>
+</head>
+
+<body>
+
+    <!-- <input id="demo" type="text">
+    <button type="button" onclick="myFunction()">Test Input</button>
+    
+    <p id="p01"></p> -->
+    <input id="demo" type="text">
+    <button type="button" onclick="fun1()">Test Input</button>
+
+    <script type="text/javascript">
+
+        // req states
+        // open = 1
+        // send = 2
+        // processing = 3
+        // done = 4
+
+        // try{
+
+        //     eval("alert('Hello)");  
+        // }
+        // catch(err){
+        // console.log(err)
+        // console.log(err.name)
+        // console.log(err.message)
+        // }
+
+
+        let z = 10;
+        // let b = 100;
+
+        // try{
+        // let a = z + b;
+        // console.log(a);
+        // }
+        // catch(a){
+
+        // }
+        // finally{
+        //     alert("final statement")
+        // }
+
+        // console.log("hello world");
+        // document.write("hello ")
+
+
+
+
+
+        // function myFunction() {
+        //   const message = document.getElementById("p01");
+        //   message.innerHTML = "";
+        //   let x = document.getElementById("demo").value;
+        //   try { 
+        //     if(x.trim() == "")  throw "is empty";
+        //     if(isNaN(x)) throw "is not a number";
+        //     x = Number(x);
+        //     if(x > 10)   throw "is too high";
+        //     if(x < 5)  throw "is too low";
+        //   }
+        //   catch(err) {
+        //     message.innerHTML = "Input " + err;
+        //   }
+        //   finally {
+        //     document.getElementById("demo").value = "";
+        //   }
+        // }
+
+
+
+        // class A{
+
+        // test1(){
+        // console.log("hello world")
+        // }
+
+        // test2(a,b){
+        //     document.write(a,b)
+        // }
+        // test3(){
+        //     document.write(a,b)
+        // }
+        // }
+
+
+        // let obj1 = new A();
+
+        // obj1.test1();
+        // obj1.test2('hello',"001");
+        // obj1.test3();
+
+        // class b{
+        //     constructor(data,id){
+        //         // console.log("hello world");
+        //         // console.log(data);
+        //         this.value = data;
+        //         this.value1 = id;
+        //     }
+        // test1(){
+        //     console.log(this.value,this.value1);
+        // }
+        // test2(){
+        //     document.write(this.value);
+        // }
+        // }
+
+        // let myobj1 = new b("jitesh","001");
+        // myobj1.test1();
+        // myobj1.test2();
+
+
+
+
+        // let Students = [
+        // {
+        // 	name : "abc",
+        // 	email : "abc@gmail.com",
+        // 	contact :1234,
+        // 	subject : "python"
+        // },
+
+        // {
+        // 	name : "pqr",
+        // 	email : "pqr@gmail.com",
+        // 	contact :1234,
+        // 	subject : "js"
+        // },
+        // {
+        // 	name : "xyz",
+        // 	email : "xyz@gmail.com",
+        // 	contact :1234,
+        // 	subject : "css"
+        // },
+        // {
+        // 	name : "mno",
+        // 	email : "mno@gmail.com",
+        // 	contact :1234,
+        // 	subject : "python"
+        // },
+        // {
+        // 	name : "asw",
+        // 	email : "mno@gmail.com",
+        // 	contact :1234,
+        // 	subject : "js"
+        // },
+        // {
+        // 	name : "kgf",
+        // 	email : "kgf@gmail.com",
+        // 	contact :34234,
+        // 	subject : "python"
+        // },
+        // {
+        // 	name : "rrr",
+        // 	email : "rrr@gmail.com",
+        // 	contact :34234,
+        // 	subject : "js"
+        // },
+        // {
+        // 	name : "veeru",
+        // 	email : "veeru@gmail.com",
+        // 	contact :34234,
+        // 	subject : "java"
+        // },
+        // ]
+
+
+
+
+
+
+        // class trycatch{
+        // constructor(data){
+        // this.value = data;
+        // }
+
+        // readdata(){
+        //     let a = this.value.map((ele)=>{
+        //      for(let i in ele){
+        //         console.log(ele[i])
+        //      }
+        //     })
+        // }
+
+        // findsub(){
+        //     let int = document.getElementById("demo").value;
+        //     let a = this.value.filter((ele)=>{
+        //         return ele.subject == int;
+        //     })
+        //     console.log(a)
+        // }
+
+        // }
+
+        // let studata = new trycatch(Students);
+        // studata.readdata();
+        // // let sub = prompt('enter sub')
+        // const fun1 = ()=>{
+        //     studata.findsub();
+
+        // }
+
+
+
+
+
+        class parent {
+            constructor(name) {
+                // console.log(name)
+                this.value = name;
+            };
+            // ptest1(){
+            // console.log("console in parent")
+            // }
+
+            goal() {
+                return `${this.value} wants to become a Chef !`
+            }
+            interest() {
+                return `${this.value} interested in cooking`
+            }
+        }
+
+        let obj1 = new parent("hello");
+
+        // console.log(obj1.goal())
+
+
+
+
+        class child extends parent {
+            constructor(data) {
+                // super(data);
+                console.log(data)
+            };
+            // ctest1(){
+            //     console.log("console in child")
+
+            // }
+
+            need() {
+                return `${this.value} needs a cooking kit`;
+
+            }
+            info() {
+                return `${this.goal()} <br>  ${this.interest()}<br> ${this.need()}`
+            }
+        }
+        let obj2 = new child("Jitesh");
+        document.write(obj2.info())
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2</title>
+    <style>
+        #box {
+            height: 300px;
+            width: 300px;
+            border: 1px solid;
+        }
+
+        img {
+            height: 300px;
+            width: 300px;
+        }
+
+        #box2 {
+            height: 300px;
+            width: 300px;
+            border: 10px solid;
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <p id="para"><i>Lorem ipsum dolor <img src= "./portfolio-1.jpg">sit amet consectetur adipisicing elit.</i> Obcaecati animi odio quod deleniti illum? <b> error ab velit suscipit non vitae nisi repellendus eos qui id facere, </b>molestiae iusto ut!</p> -->
+
+    <!-- <button onclick="addtext()">Click me</button> -->
+    <!-- <h1 id = "head"></h1> -->
+    <button onclick="addimg()">Click me</button>
+    <div id="box"></div>
+
+
+    <div id="box2" onclick="changeclor()"></div>
+
+    <script type="text/javascript">
+
+        // alert("Session");
+
+
+        // function fun1() {
+        //     alert("inside fun1");
+        //     console.log("inside fun1");
+        // }
+        // fun1();
+
+
+        // alert("hello " + " world");
+
+
+        // concatination
+
+
+        // var fname = prompt("Enter a name");
+        // var lname = prompt("Enter a name");
+        // var msg   = "my first name is " + fname + " and my last name is " + lname;
+        // console.log(msg);
+
+        // function addnum() {
+        //     var num1 = prompt("Enter a number");
+        //     var num2 = prompt("Enter a number");
+        //     var ans = Number(num1) - Number(num2);
+        //     // var ans = num1 + num2;
+        //     console.log(ans);
+        // }
+
+        // addnum();
+
+
+
+        // document.write("hello world");
+        // document.write(979898);
+        // document.write("<h1>hello world</h1>");
+        // alert("<h1>hello world</h1>")
+        // document.write("<img src='../../portfolio-1.jpg' height = '100' width = '100' alt=''");
+
+
+
+        // var p = document.getElementById("para");
+        // alert(p.innerHTML);
+        // alert(p.innerText);
+        // console.log(p)
+
+
+
+        // function addtext(){
+        //     document.getElementById("head").innerHTML = "welcome";
+        //     alert("function is called");
+        // }
+
+
+
+        function addimg() {
+            document.getElementById("box").
+
+                innerHTML = "<img src='portfolio-1.jpg'>";
+        }
+
+        // function changeclor() {
+        //     var x = document.getElementById("box2");
+        //     x.style.backgroundColor = "red";
+        //     x.style.border = "dashed 10px green";
+        // }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

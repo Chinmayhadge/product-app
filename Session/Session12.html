@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 12</title>
+</head>
+
+<body>
+
+    <form onsubmit="return validate1()" action="Session5.html">
+        <!-- <label for="int1">Name :</label>
+    <input type="text" name="" id="int1">
+    <p id = "para1" class="text" style="color:red"></p>
+
+    <br>
+    <label for="int2" >Password :</label>
+    <input type="password" name="" id="int2">
+    <p id = "para2" class="text" style="color:red"></p>
+
+-->
+        <!-- <br>
+    <label for="int3">Email :</label>
+    <input type="text" name="" id="int3">
+    <p id = "para3" class="text" style="color:red"></p>
+
+    <input type="submit"> -->
+    </form>
+
+
+
+    <!-- /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; -->
+
+
+
+
+    <!-- 
+Minimum eight characters, at least one letter and one number:
+
+"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+
+
+
+Minimum eight characters, at least one letter, one number and one special character:
+
+"^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$"
+
+
+Minimum eight characters, at least one uppercase letter, one lowercase letter and one number:
+
+"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"
+
+
+Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character:
+
+"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"
+
+
+
+
+
+Minimum eight and maximum 10 characters, at least one uppercase letter, one lowercase letter, one number and one special character:
+
+"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$" -->
+
+
+
+
+    <!-- At least one upper case English letter, (?=.*?[A-Z])
+At least one lower case English letter, (?=.*?[a-z])
+At least one digit, (?=.*?[0-9])
+At least one special character, (?=.*?[#?!@$%^&*-])
+Minimum eight in length .{8,} -->
+
+
+
+    <input type="number" id="input">
+    <button type="button" id="btn">Click</button>
+    <h1 id="head"></h1>
+    <script type="text/javascript">
+
+
+        document.getElementById("btn").addEventListener("click", function () {
+
+            var a = document.getElementById("input").value;
+
+            switch (Number(a
+            )) {
+                case 1:
+                    document.getElementById("head").innerHTML = "Monday";
+                    break;
+                case 2:
+                    document.getElementById("head").innerHTML = "Tuesday";
+                    break;
+                case 3:
+                    document.getElementById("head").innerHTML = "Wednesday";
+                    break;
+                default:
+                    document.getElementById("head").innerHTML = "Match not found";
+
+            }
+        })
+
+
+
+
+        function validate1() {
+            var a = document.getElementById("int1");
+            var b = document.getElementById("int2");
+            var c = document.getElementById("int3");
+            var regex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+            var flag = true;
+
+            if (a.value.trim() == "") {
+                // alert("input is blank");
+                document.getElementById("para1").innerHTML = "input is blank"
+                flag = false;
+            }
+
+            if (b.value.trim() == "") {
+                // alert("password is blank");
+                document.getElementById("para2").innerHTML = "password is blank"
+                flag = false;
+            }
+            else if (b.value.length < 8) {
+                // alert("password is too short");
+                document.getElementById("para2").innerHTML = "password is too short"
+
+                flag = false;
+            }
+            else if (b.value.length > 10) {
+                // alert("password is too long");
+                document.getElementById("para2").innerHTML = "password is too long"
+
+                flag = false;
+            }
+
+            if (c.value.trim() == "") {
+                document.getElementById("para3").innerHTML = "Email is blank"
+                flag = false;
+            }
+            else if (!c.value.match(regex)) {
+                document.getElementById("para3").innerHTML = "Email is invalid"
+                flag = false;
+            }
+
+
+
+            return flag;
+
+
+        }
+    </script>
+</body>
+
+</html>

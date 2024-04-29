@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .container{
+            height: 300px;
+            width: 300px;
+            border:solid 1px;
+        }
+    </style>
+</head>
+<body>
+    
+<!-- <div class="container" id = "div1" onclick="fun1()" onmouseout="fun3()" onmouseover="fun2()"></div> -->
+<!-- <div class="container" id = "div2" onmouseover="fun2()"></div> -->
+<!-- <div class="container" id = "div3" onmouseout="fun3()"></div> -->
+<!-- <div class="container" id = "div4" onmousedown="fun4()"></div> -->
+<!-- <div class="container" id = "div5" onmouseup="fun5()"></div> -->
+<!-- <div class="container" id = "div6"   onmousemove="fun6()"></div> -->
+
+
+
+<!-- input event -->
+<!-- <input type="text" name="" oninput="fun7()" id = "int1"> -->
+<!-- <input type="text" name="" onfocus="fun8()" id = "int2"> -->
+<!-- <input type="text" name="" onblur="fun9()" id = "int3"> -->
+<!-- <input type="text" name="" onkeydown="fun10()" id = "int4"> -->
+<!-- <input type="text" name="" onkeyup="fun11()" id = "int5"> -->
+<!-- <input type="text" name="" onkeypress="fun12()" id = "int6"> -->
+<!-- <input type="text" name="" oncopy="fun13()" id = "int7"> -->
+<!-- <input type="text" name="" onpaste="fun14()" id = "int8"> -->
+<!-- <input type="text" name="" oncut="fun15()" id = "int9"> -->
+
+
+<!-- <select name="" id="" onchange="fun16()">
+    <option>option 1</option>
+    <option>option 2</option>
+    <option>option 3</option>
+    <option>option 4</option>
+    <option>option 5</option>
+</select>
+<div class="container" id="box1"></div> -->
+
+<!-- <input type  = "text"  id="input" oninput = "myfun1()" onblur = "deleteit()">
+<h1 id="head"></h1> -->
+
+
+
+<!-- <button id = "btn">click</button>
+<button id = "btn1">click 2</button> -->
+
+
+
+<div class="container" id = "main1"></div>
+<button onclick="startfun()">Start </button>
+<button onclick="stopfun()">Stop </button>
+<div class="container" id="main2"></div>
+    <script type="text/javascript">
+
+
+function startfun(){
+    document.getElementById("main2").addEventListener("mousemove",funVal);
+}
+
+function funVal(){
+    document.getElementById("main1").innerHTML = Math.random();
+}
+
+
+function stopfun(){
+    document.getElementById("main2").removeEventListener("mousemove",funVal);
+    document.getElementById("main1").innerHTML = " ";
+
+}
+
+
+
+
+
+
+
+
+
+// var b = document.getElementById("btn");
+
+// b.addEventListener("click",myfun2);
+
+
+// document.getElementById("btn1").addEventListener("click",myfun2);
+
+
+
+
+
+
+// function myfun2(){
+//     alert("hello world")
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function myfun1(){
+//     var v = document.getElementById("input").value;
+//     document.getElementById("head").innerHTML = v;
+// }
+// function deleteit(){
+// document.getElementById("input").value = " " ;
+// }
+
+// function fun1(){
+
+//     document.getElementById("div1").style.backgroundColor = "red";
+// }
+
+// function fun2(){
+
+// // document.getElementById("div2").style.backgroundColor = "red";
+// document.getElementById("div1").style.backgroundColor = "green";
+
+// }
+// function fun3(){
+
+// // document.getElementById("div3").style.backgroundColor = "red";
+// document.getElementById("div1").style.backgroundColor = "blue";
+
+// }
+
+
+// function fun4(){
+
+// document.getElementById("div4").style.backgroundColor = "red";
+
+// }
+
+
+
+// function fun5(){
+
+// document.getElementById("div5").style.backgroundColor = "red";
+
+// }
+
+
+function fun6(){
+
+// document.getElementById("div5").style.backgroundColor = "red";
+document.getElementById("div6").innerHTML = Math.random();
+
+
+}
+// function fun7(){
+//     document.getElementById("int1").style.backgroundColor = "red";
+// }
+// function fun8(){
+//     document.getElementById("int2").style.backgroundColor = "red";
+// }
+// function fun9(){
+//     document.getElementById("int3").style.backgroundColor = "red";
+// }
+
+// function fun10(){
+//     document.getElementById("int4").style.backgroundColor = "red";
+// }
+
+// function fun11(){
+//     document.getElementById("int5").style.backgroundColor = "red";
+// }
+
+
+// function fun12(){
+//     document.getElementById("int6").style.backgroundColor = "red";
+// }
+
+
+
+// function fun13(){
+//     document.getElementById("int7").style.backgroundColor = "red";
+//     alert("do not copy")
+// }
+
+
+// function fun14(){
+//     document.getElementById("int8").style.backgroundColor = "red";
+//     alert("do not paste ")
+// }
+
+// function fun15(){
+//     document.getElementById("int9").style.backgroundColor = "red";
+//     alert("do not cut ")
+// }
+
+
+
+// function fun16(){
+//     document.getElementById("box1").style.backgroundColor = "red";
+// }
+
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Session 14</title>
+	<style>
+		.slides {
+			height: 600px;
+
+		}
+
+		.slides img {
+			height: 100%;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body>
+
+
+	<div class="main">
+		<div class="slides">
+			<img src="./image1.jpg">
+		</div>
+		<div class="slides">
+			<img src="./image2.jpg">
+		</div>
+		<div class="slides">
+			<img src="./image3.jpg">
+		</div>
+		<div class="slides">
+			<img src="./portfolio-1.jpg">
+		</div>
+		<div class="slides">
+			<img src="./portfolio-2.jpg">
+		</div>
+	</div>
+
+
+	<button onclick="count(-1)">Prev</button>
+	<button onclick="count(1)">Next</button>
+
+
+	<!-- <button onclick="prev()">Prev</button>
+    <button  onclick="next()">Next</button> -->
+	<input type="text" id="int" placeholder="">
+	<button type="button" onclick="mainfun()">Click Me</button>
+	<script type="text/javascript">
+		var cnt = 0;
+		function count(x) {
+			cnt += x;
+			slider(cnt);
+		}
+		setInterval(function () {
+			cnt++;
+			slider(cnt);
+		}, 3000)
+		function slider(num) {
+			var slide = document.querySelectorAll(".slides");
+			if (num == slide.length) {
+				num = 0;
+				cnt = 0;
+			}
+			else if (num < 0) {
+				num = slide.length - 1;
+				cnt = slide.length - 1;
+			}
+			for (var i of slide) {
+				i.style.display = "none";
+			}
+			slide[num].style.display = "block";
+		}
+		slider(cnt);
+
+
+		function prev() {
+			cnt--;
+
+			slider(cnt);
+		}
+
+		function next() {
+			cnt++;
+
+			slider(cnt);
+		}
+
+
+
+		// foreach
+
+
+		var arr = [111, 222, 333, 444, 555, 666, 777];
+		var ans = 0;
+		// var z = arr.forEach(fun1);
+
+
+		// function fun1(a,b,c,d){
+		//     // console.log("hello world");
+		//     // console.log(a);
+		//     // console.log(b);
+		//     // console.log(c);
+		//     // console.log(d);
+		//     ans+=a;
+		// }
+		// console.log(ans);
+
+
+
+		// arr.forEach(function(ele,ind,arr){
+		//     ans = ans+ele;
+		// })
+
+		// console.log(ans);
+
+
+
+		let Students = [
+			{
+				name: "abc",
+				email: "abc@gmail.com",
+				contact: 1234,
+				subject: "python"
+			},
+			{
+				name: "abc",
+				email: "abc@gmail.com",
+				contact: 1234,
+				subject: "js"
+			},
+			{
+				name: "abc",
+				email: "abc@gmail.com",
+				contact: 1234,
+				subject: "java"
+			},
+
+			{
+				name: "pqr",
+				email: "pqr@gmail.com",
+				contact: 1234,
+				subject: "js"
+			},
+			{
+				name: "xyz",
+				email: "xyz@gmail.com",
+				contact: 1234,
+				subject: "css"
+			},
+			{
+				name: "mno",
+				email: "mno@gmail.com",
+				contact: 1234,
+				subject: "python"
+			},
+			{
+				name: "asw",
+				email: "mno@gmail.com",
+				contact: 1234,
+				subject: "js"
+			},
+			{
+				name: "kgf",
+				email: "kgf@gmail.com",
+				contact: 34234,
+				subject: "python"
+			},
+			{
+				name: "rrr",
+				email: "rrr@gmail.com",
+				contact: 34234,
+				subject: "js"
+			},
+			{
+				name: "veeru",
+				email: "veeru@gmail.com",
+				contact: 34234,
+				subject: "java"
+			},
+		]
+
+
+		// Students.forEach(function(ele){
+		//     console.log(ele.name)
+		//     console.log(ele.email)
+		// })
+
+
+		function mainfun() {
+			var a = document.getElementById("int").value;
+
+			var x = Students.filter(function (ele, ind, arr) {
+				return ele.subject.toLowerCase() == a.toLowerCase() || ele.name.toLowerCase() == a.toLowerCase();
+			})
+			console.log(x)
+		}
+
+
+
+		var y = Students.filter(function (ele, ind, arr) {
+			return ele.name == "kgf";
+		})
+
+
+		console.log(y)
+
+
+	</script>
+</body>
+
+</html>

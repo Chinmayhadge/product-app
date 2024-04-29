@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise 2</title>
+    <style>
+        #main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap !important;
+            gap: 10px;
+        }
+
+        .innerblock {
+            /* display: flex;
+            justify-content: center;
+            align-items: center; */
+            width: 40%;
+            border: 1px solid;
+        }
+
+        img {
+            width: 250px;
+            height: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="fun1()">Click</button>
+    <div id="main"></div>
+    <script type="text/javascript">
+
+        let main1 = document.getElementById("main");
+        const fun1 = () => {
+            let req = new XMLHttpRequest();
+            req.onload = () => {
+                if (req.status == 200 && req.readyState == 4) {
+                    let data = JSON.parse(req.responseText);
+                    // console.log(req.responseText);
+                    let x = data.map((e) => {
+                        let block = document.createElement('div');
+                        block.setAttribute("class", "innerblock");
+
+                        for (let i in e) {
+                            let subblock1 = document.createElement('div');
+                            subblock1.setAttribute("class", "subblock1");
+                            if (i == 'title') {
+                                subblock1.innerHTML += `<p><b>${i}: ${e[i]}</b></p>`;
+
+                            }
+                            else if (i == 'id' || i == 'price' || i == 'category' || i == 'rating' || i == 'description') {
+                                subblock1.innerHTML += `<p>${i}: ${e[i]}</p>`;
+
+                            }
+                            else if (i == 'image') {
+                                subblock1.innerHTML += `<img src="${e[i]}">`;
+                                subblock1.setAttribute("class", "subblock2");
+
+                            }
+                            block.appendChild(subblock1);
+                        }
+
+                        main1.appendChild(block);
+                    })
+                }
+            }
+            req.open("GET", "https://fakestoreapi.com/products", true);
+            req.send();
+        }
+
+
+        // { "id": 1, 
+        // "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+        // "price": 109.95, "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+        //"category": "men's clothing",
+        // "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+        // "rating": { "rate": 3.9, "count": 120 }
+        //}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const fun1 = () => {
+        //     let req = new XMLHttpRequest();
+        //     req.onload = function () {
+        //         if (this.status == 200 && this.readyState == 4) {
+        //             let data = this.responseText;
+        //             // document.write(data)
+        //             let maindata = JSON.parse(data);
+        //             //     console.log(maindata)
+        //             // document.write(maindata)
+
+        //             // let str = JSON.stringify(data);
+        //             // console.log(str)
+        //             let x = maindata.filter((ele, ind, arr) => {
+        //                 return ele.userId == 5;
+        //             })
+
+        //             console.log(x)
+        //         }
+
+
+        //     }
+        //     req.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+        //     req.send();
+        // }
+    </script>
+</body>
+
+</html>

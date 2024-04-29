@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3</title>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 20px;
+            background-color: #232323;
+            color: #ffffff;
+            box-sizing: border-box;
+        }
+
+
+        .block {
+            height: 0px;
+            font-size: 18px;
+            border: 1px solid #4d4d4d;
+            overflow: hidden;
+            transition: all 1s;
+        }
+
+        .padd {
+            padding: 15px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <button type="button" onclick="open1()">Button 1</button>
+    <div id="block1" class="block">
+        <div class="padd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores rerum
+            veritatis
+            placeat, aliquid
+            quos laudantium eum sapiente. Quam doloremque, et atque corrupti possimus nulla itaque nihil optio! Tenetur,
+            aut
+            architecto?</div>
+    </div>
+    <button type="button" onclick="open2()">Button 2</button>
+    <div id="block2" class="block">
+        <div class="padd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores rerum
+            veritatis
+            placeat, aliquid
+            quos laudantium eum sapiente. Quam doloremque, et atque corrupti possimus nulla itaque nihil optio! Tenetur,
+            aut
+            architecto?</div>
+    </div>
+
+    <button type="button" onclick="open3()">Button 3</button>
+    <div id="block3" class="block">
+        <div class="padd">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores rerum
+            veritatis
+            placeat, aliquid
+            quos laudantium eum sapiente. Quam doloremque, et atque corrupti possimus nulla itaque nihil optio! Tenetur,
+            aut
+            architecto?</div>
+    </div>
+
+
+    <script type="text/javascript">
+
+        function open1() {
+            var x = document.getElementById("block1");
+            if (x.style.height == "70px") {
+                x.style.height = "0px";
+            }
+            else {
+                x.style.height = "70px";
+            }
+        }
+        function open2() {
+            var x = document.getElementById("block2");
+            if (x.style.height == "70px") {
+                x.style.height = "0px";
+            }
+            else {
+                x.style.height = "70px";
+            }
+        }
+        function open3() {
+            var x = document.getElementById("block3");
+            if (x.style.height == "70px") {
+                x.style.height = "0px";
+            }
+            else {
+                x.style.height = "70px";
+            }
+        }
+        // var arr = [11, 22, 33, 44, 55, 66, 77, 88, 99]
+
+        // for (var i = 0; i < arr.length; i++) {
+        //     if (arr[i] > 30 && arr[i] < 90) {
+        //         document.write(arr[i] + "<br>");
+        //     }
+        // }
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write(i);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write(j);
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write("[" + i + "-" + j + "]");
+        //     }
+        //     document.write("<br>");
+        // }
+
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 1; j <= i; j++) {
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+            // outer loop for columns => i
+            // inner loop for rows => j
+        // for (var i = 1; i <= 5; i++) {
+        //     for (var j = 5; j >= i; j--) {
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+        // }
+
+
+    </script>
+</body>
+
+</html>

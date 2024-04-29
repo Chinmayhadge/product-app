@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session 2</title>
+    <style>
+        .main {
+
+            justify-content: center;
+            gap: 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+
+        }
+
+        .inner {
+            width: 40%;
+            /* height:200px; */
+            border: 1px solid;
+        }
+
+        .inner img {
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <button onclick="mainfun1()">Click me</button> -->
+
+
+    <button id="btn">Click me</button>
+
+    <div class="main" id="mainbox"></div>
+</body>
+<script type="text/javascript">
+
+
+    // const mainfun1 = ()=>{
+    //     let req = new XMLHttpRequest();
+    //     req.onload = function(){
+    //         if(this.status == 200 && this.readyState == 4){
+    //             let data = this.responseText;
+    //             // document.write(data)
+    //             let maindata = JSON.parse(data);
+    //         //     console.log(maindata)
+    //         // document.write(maindata)
+
+    //         // let str = JSON.stringify(data);
+    //         // console.log(str)
+    //         let x = maindata.filter((ele,ind,arr)=>{
+    //    return ele.userId == 5;
+    //         })
+
+    //         console.log(x)
+    //         }
+
+
+    //     }
+    //     req.open('GET','https://jsonplaceholder.typicode.com/posts',true);
+    //     req.send();
+    // }
+
+    let content = document.getElementById("mainbox");
+
+    document.getElementById("btn").addEventListener("click", () => {
+        let req = new XMLHttpRequest();
+        req.onload = () => {
+            if (req.status == 200 && req.readyState == 4) {
+                let data = JSON.parse(req.responseText)
+                // console.log(data);
+                let x = data.map((ele) => {
+                    let box = document.createElement("div");
+                    box.setAttribute("class", "inner");
+                    for (let i in ele) {
+
+                        if (i == 'albumId' || i == 'id' || i == 'name' || i == 'title' || i == 'url') {
+                            box.innerHTML += `<p> ${i} : ${ele[i]}</p>`;
+
+                        }
+                        else if (i == 'thumbnailUrl') {
+                            box.innerHTML += `<img src='${ele[i]}'>`
+                        }
+
+                    }
+                    content.appendChild(box);
+
+                })
+            }
+        }
+        req.open('GET', 'https://jsonplaceholder.typicode.com/photos', true);
+        req.send();
+    })
+</script>
+
+
+</html>

@@ -1,0 +1,46 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: aqua;
+}
+
+.main {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#mainbox {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+.submain {
+    width: 300px;
+    margin: 20px;
+}
+
+button {
+    margin: 50px auto;
+    background: transparent;
+    color: rgb(238, 243, 246);
+    font-size: 18px;
+    border-radius: 30px;
+    width: 280px;
+    border: 2px solid rgb(233, 237, 240);
+    padding: 20px;
+    font-weight: 700;
+}
+
+.respImage {
+    width: 300px;
+    height: 300px;
+}

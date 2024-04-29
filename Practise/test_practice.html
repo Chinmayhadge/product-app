@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo practice</title>
+</head>
+<style>
+    input {
+        width: 30%;
+        height: 50px;
+        border: none;
+        border-bottom: 1px solid grey;
+        margin: 15px;
+    }
+
+    #inline-CTA {
+        display: inline;
+    }
+
+    button {
+        display: block;
+        width: 400px;
+        padding: 15px;
+        font-weight: 800;
+        margin: 15px;
+        border: 0;
+        border-radius: 20px;
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <!-- assignment 1 HTML -->
+    <!-- BMI calculator -->
+    <!-- <h2> BMI calculator</h2>
+    <input type="number" placeholder="Enter your weight" id="num1">
+    <input type="number" placeholder="Enter your height" id="num2">
+    <button type="button" onclick="calcBMI()" id="inline-CTA">calculate BMI</button>
+    <div id="BMI" style="font-weight: bold;"></div> -->
+
+    <!-- type of triangle -->
+    <!-- <h2> Type of triangle</h2>
+    <input type="number" placeholder="Enter 1st edge" id="edge1">
+    <input type="number" placeholder="Enter 2nd edge" id="edge2">
+    <input type="number" placeholder="Enter 3rd edge" id="edge3">
+
+    <button type="button" onclick="checkTri()">Check type of triangle</button>
+    <div id="typeTri" style="font-weight: bold;"></div> -->
+
+    <!-- Assignment 2 - display star pattern -->
+    <div id="star"></div>
+
+    <button onclick="datafun()">API data</button>
+</body>
+<script>
+
+    // api data
+    var apiData = [
+        {
+            "userId": 1,
+            "id": 1,
+            "title": "sunt aut facere repellat provident occaecati excepturi optio reprehenderit",
+            "body": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+        },
+        {
+            "userId": 1,
+            "id": 2,
+            "title": "qui est esse",
+            "body": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+        },
+        {
+            "userId": 1,
+            "id": 3,
+            "title": "ea molestias quasi exercitationem repellat qui ipsa sit aut",
+            "body": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+        },
+        {
+            "userId": 1,
+            "id": 4,
+            "title": "eum et est occaecati",
+            "body": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+        },
+        {
+            "userId": 1,
+            "id": 5,
+            "title": "nesciunt quas odio",
+            "body": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+        },
+        {
+            "userId": 1,
+            "id": 6,
+            "title": "dolorem eum magni eos aperiam quia",
+            "body": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+        },
+        {
+            "userId": 1,
+            "id": 7,
+            "title": "magnam facilis autem",
+            "body": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+        },
+        {
+            "userId": 1,
+            "id": 8,
+            "title": "dolorem dolore est ipsam",
+            "body": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+        },
+        {
+            "userId": 1,
+            "id": 9,
+            "title": "nesciunt iure omnis dolorem tempora et accusantium",
+            "body": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+        },
+        {
+            "userId": 1,
+            "id": 10,
+            "title": "optio molestias id quia eum",
+            "body": "quo et expedita modi cum officia vel magni\ndoloribus qui repudiandae\nvero nisi sit\nquos veniam quod sed accusamus veritatis error"
+        }
+    ];
+
+    // assignment 1
+    // calculate BMI
+    function calcBMI() {
+        var a1 = Number(document.getElementById("num1").value);
+        var a2 = Number(document.getElementById("num2").value);
+        // console.log(a1, a2);
+
+        var BMI = a1 / (a2 * a2);
+        if (BMI < 18.5) {
+            document.getElementById("BMI").innerHTML = "Underweight =" + BMI;
+        }
+        else if (BMI >= 18.5 && BMI < 24.9) {
+            document.getElementById("BMI").innerHTML = "Normal weight =" + BMI;
+        }
+        else if (BMI >= 25 && BMI < 29.9) {
+            document.getElementById("BMI").innerHTML = "Overweight =" + BMI;
+        }
+        else {
+            document.getElementById("BMI").innerHTML = "Obesity =" + BMI;
+        }
+
+    }
+
+    // check type of triangle
+    function checkTri() {
+        var a1 = Number(document.getElementById("edge1").value);
+        var a2 = Number(document.getElementById("edge2").value);
+        var a3 = Number(document.getElementById("edge3").value);
+
+        if (a1 == a2 && a3 == a1) {
+            document.getElementById("typeTri").innerHTML = "equilateral";
+        } else if (a1 == a2 || a2 == a3 || a3 == a1) {
+            document.getElementById("typeTri").innerHTML = "isoscales";
+        }
+        else {
+            document.getElementById("typeTri").innerHTML = "scalene";
+        }
+
+    }
+
+
+    // assignment 2 star patterns
+    // normal pattern
+    for (var i = 0; i < 5; i++) {
+        for (var j = 0; j <= i; j++) {
+            document.getElementById("star").innerHTML += "*";
+        }
+        document.getElementById("star").innerHTML += "<br>";
+    }
+
+    // 1 22 333 patterns
+    for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= i; j++) {
+            document.getElementById("star").innerHTML += i;
+        }
+        document.getElementById("star").innerHTML += "<br>";
+    }
+
+    // 1 12 123 patterns
+    for (var i = 1; i <= 5; i++) {
+        for (var j = 1; j <= i; j++) {
+            document.getElementById("star").innerHTML += j;
+        }
+        document.getElementById("star").innerHTML += "<br>";
+    }
+
+    // reverse pattern
+    for (var i = 5; i >= 1; i--) {
+        for (var j = 1; j <= i; j++) {
+            document.getElementById("star").innerHTML += "*";
+        }
+        document.getElementById("star").innerHTML += "<br>";
+    }
+
+    // assignment 3
+    // count no of vowels in strings
+    var z = "hello world";
+    var vowels = ["a", "e", "i", "o", "u"];
+    var count = 0;
+
+    for (var i of z) {
+        for (var j of vowels) {
+            // console.log(j);
+            if (i == j) {
+                count += 1;
+
+            }
+        }
+    } console.log(count);
+
+    // sum and product in array
+    var arr1 = [1, 2, 3, 4];
+    var sum = 0;
+    var product = 1;
+
+
+    for (var i of arr1) {
+        sum += i;
+    }
+
+    console.log(sum);
+
+    for (var i of arr1) {
+        product *= i;
+    }
+
+    console.log(product);
+
+    // var apiData2 = "https://jsonplaceholder.typicode.com/posts";
+    function datafun() {
+        for (var i of apiData) {
+            console.log(i);
+            for (var j in i) {
+                console.log(i[j])
+            }
+            // var x = document.createElement("div");
+            // div.className = "main";
+
+        }
+    }
+
+</script>
+
+</html>
